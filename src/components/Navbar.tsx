@@ -120,7 +120,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden sm:flex items-center gap-3">
             <ThemeToggle />
             <a
-              href="/deepan-j-resume.pdf"
+              href="./deepan-j-resume.pdf"
               download="deepan-j-resume.pdf"
               id="navbar-resume-btn"
               className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white shadow-md shadow-indigo-500/20 transition-all hover:shadow-indigo-500/30 hover:scale-[1.02] active:scale-[0.98]"
@@ -173,7 +173,7 @@ export const Navbar: React.FC = () => {
               })}
               <div className="pt-3 mt-2 border-t border-slate-200 dark:border-slate-800">
                 <a
-                  href="/deepan-j-resume.pdf"
+                  href="./deepan-j-resume.pdf"
                   download="deepan-j-resume.pdf"
                   id="mobile-resume-btn"
                   onClick={() => setMobileMenuOpen(false)}

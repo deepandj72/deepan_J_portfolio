@@ -94,7 +94,7 @@ export const Hero: React.FC = () => {
               <div className="relative w-60 sm:w-72 md:w-80 h-60 sm:h-72 md:h-80 rounded-3xl overflow-hidden p-2 bg-gradient-to-tr from-indigo-500 via-purple-500 to-cyan-400 shadow-2xl shadow-indigo-500/20">
                 <div className="w-full h-full rounded-2xl overflow-hidden bg-slate-950 relative">
                   <img
-                    src="/deepan-photo.png"
+                    src="./deepan-photo.png"
                     alt="Deepan J - AI and Data Science Engineer"
                     className="w-full h-full object-cover object-top filter brightness-105 contrast-105"
                     loading="eager"

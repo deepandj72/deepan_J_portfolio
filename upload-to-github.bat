@@ -10,14 +10,18 @@ if not exist "%GIT_CMD%" (
     set "GIT_CMD=git"
 )
 
-echo Checking Git status...
-"%GIT_CMD%" status
+echo Please paste your GitHub Personal Access Token below:
+set /p "GH_TOKEN=GitHub Token: "
 
-echo.
-echo Pushing main branch to GitHub...
-echo (If prompted, sign in via browser or paste your Personal Access Token)
-echo.
-"%GIT_CMD%" push -u origin main
+if "%GH_TOKEN%"=="" (
+    echo.
+    echo No token entered. Attempting default push...
+    "%GIT_CMD%" push -u origin main
+) else (
+    echo.
+    echo Uploading to https://github.com/deepandj72/deepan_J_portfolio...
+    "%GIT_CMD%" push "https://%GH_TOKEN%@github.com/deepandj72/deepan_J_portfolio.git" main
+)
 
 echo.
 if %ERRORLEVEL% EQU 0 (
@@ -27,9 +31,7 @@ if %ERRORLEVEL% EQU 0 (
     echo ============================================================
 ) else (
     echo.
-    echo If GitHub authentication failed:
-    echo 1. Generate a token at: https://github.com/settings/tokens
-    echo 2. Run: "%GIT_CMD%" push https://^<YOUR_TOKEN^>@github.com/deepandj72/deepan_J_portfolio.git main
+    echo Upload failed. Please verify that your token has 'repo' permissions.
 )
 
 pause
